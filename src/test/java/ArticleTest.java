@@ -19,7 +19,7 @@ public class ArticleTest {
 
     @Test
     public void articleTitleCheck() {
-        //Ser driver path
+        //Set driver path
         System.setProperty("webdriver.chrome.driver", "/Users/Angelovsky/Downloads/chromedriver");
 
         //Open Browser
