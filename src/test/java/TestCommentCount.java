@@ -22,11 +22,10 @@ public class TestCommentCount {
 
         driver.get(URL);
 
-        List<WebElement> articles = driver.findElements(ARTICLE); //list of elements <element type>
+        List<WebElement> articles = driver.findElements(ARTICLE); //list of elements <element type> massiv statej, najdennih to tagu article
 
         Article article = getArticle(articles, 5);
-        System.out.println(article.getTitle());
-        System.out.println(article.getCommentCount());
+
 
     }
 
@@ -34,12 +33,12 @@ public class TestCommentCount {
         WebElement article = elements.get(i); //iz spiska vitaskivajem element i zapisivajem v WebElement article
 
         Article currentArticle = new Article(); //sozdajem kopiju objekta Article
-        currentArticle.setTitle(article.findElement(TITLE).getText());
+        currentArticle.setTitle(article.findElement(TITLE).getText()); //ishem
 
         List<WebElement> commentCounters = article.findElements(COMMENT_COUNTER);
 
         if (commentCounters.isEmpty()) { //proverjajem pustoj li prishel massiv, vernet "true" esli spisok pustoj
-           currentArticle.setCommentCount(0); //esli spisok pustoj, to peredajem tuda 0
+           currentArticle.setCommentCount("0"); //esli spisok pustoj, to peredajem tuda 0
         } else {
             currentArticle.setCommentCount(commentCounters.get(0).getText());
         }
