@@ -1,8 +1,12 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+
 
 public class ClientLoan {
+
     @Test
     public void clientLoan () {
         sumToPay (100, 124);
