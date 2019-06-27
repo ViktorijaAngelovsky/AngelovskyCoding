@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Response {
     private Coord coord;
-    @JsonProperty("weather") //4tobi raspoznaval field "weather" kak v json. identi4noje napisanije
+    @JsonProperty("weather") //4tobi raspoznaval field "weather" kak v json. identichnoje napisanije
     private List<Weather> weathers;
     private Base base;
     private Main main;

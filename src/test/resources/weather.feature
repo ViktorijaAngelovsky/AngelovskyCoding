@@ -9,11 +9,6 @@ Feature: Check coordinates of City
     Then lon is -0.13
     And lat is 51.51
 
-#    And id is 300
-#    And main is Drizzle
-#    And description is light intensity drizzle
-#    And icon is 09d
-
     And weather data:
       | id          | 300                    |
       | main        | Drizzle                |

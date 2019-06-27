@@ -32,19 +32,16 @@ public class StepDefsWeather {
     public void request_data() throws IOException {
         WeatherRequester weatherRequester = new WeatherRequester();
         response = weatherRequester.request(county, city);
-
     }
 
     @Then("lon is (.*)")
     public void check_lon(Double lon) {
         Assertions.assertEquals(lon, response.getCoord().getLon(), "Lon correct!");
-
     }
 
     @Then("lat is (.*)")
     public void check_lat(Double lat) {
         Assertions.assertEquals(lat, response.getCoord().getLat(), "Lat correct!");
-
     }
 
     @Then("weather data:")
@@ -53,7 +50,6 @@ public class StepDefsWeather {
         Assertions.assertEquals(data.get("main"), response.getWeathers().get(0).getMain());
         Assertions.assertEquals(data.get("description"), response.getWeathers().get(0).getDescription());
         Assertions.assertEquals(data.get("icon"), response.getWeathers().get(0).getIcon());
-
     }
 
 //         VARIANT 2
@@ -188,7 +184,6 @@ public class StepDefsWeather {
     public void check_cod(Double code) {
         Assertions.assertEquals(code, response.getCod().getCod());
     }
-
 }
 
 
